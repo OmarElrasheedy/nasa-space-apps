@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space-Themed Ocean Ecosystem</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header class="main">
+        <h1>The Chemosynthetic Ocean World</h1>
+        <p>Exploring life in an alien, space-like ocean</p>
+    </header>
+
+    <section class="main">
+        <!-- Left: Energy Source -->
+        <section id="energy-source" class="section_one">
+            <h2>Energy Source</h2>
+            <p>Organisms in this alien ocean world rely on <strong>chemosynthesis</strong> to survive, using chemicals like <strong>hydrogen sulfide (H<sub>2</sub>S)</strong> or <strong>methane (CH<sub>4</sub>)</strong> for energy.</p>
+        </section>
+
+        <!-- Right: Geological Features -->
+        <section id="geological-features" class="section_tow">
+            <h2>Geological Features</h2>
+            <p>The alien seafloor is rich in <strong>hydrothermal vents</strong>, volcanic activity, and mineral deposits. These features support life in the deep ocean.</p>
+        </section>
+
+        <!-- Left: Biosphere -->
+        <section id="biosphere" class="section_three">
+            <h2>Biosphere</h2>
+            <p>The ecosystem is dominated by chemosynthetic microbes, but more complex life forms like <strong>tube worms</strong> may evolve.</p>
+        </section>
+
+        <!-- Right: Ecosystem Dynamics -->
+        <section id="ecosystem-dynamics" class="section_four">
+
+            <h2>Ecosystem Dynamics</h2>
+            <p>Life thrives through symbiotic relationships. Chemosynthetic bacteria support larger organisms like tube worms, forming the basis of the ecosystem.</p>
+        </section>
+    </section>
+    <section class="video-section"> 
+
+        <section class="before_video">
+            <img src="img/second-removebg-preview.png" alt="Plant Image">
+        </section>
+        
+        <section class="video">
+            <div class="video-section">
+                <h2>Explore the Alien Ocean</h2>
+                <video controls>
+                    <source src="ocean-exploration.mp4"  type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </section>
+
+        
+        <footer>
+            <p>&copy; 2024 Alien Ocean World Exploration</p>
+        </footer>
+        
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section, .middle-section, .video-section");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
